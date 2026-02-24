@@ -4,6 +4,8 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 import PixelTrail from './components/PixelTrail';
 import './App.css';
 
@@ -28,14 +30,10 @@ function App() {
         <Experience />
         <Skills />
 
-        <section id="contact" className="min-h-[60vh] flex items-center justify-center border-b border-[var(--color-brand-dark)]">
-          <h2 className="text-3xl font-semibold text-[var(--color-brand-coffee-light)]">Contacto (Fase 6)</h2>
-        </section>
+        <Contact />
       </main>
 
-      <footer className="py-8 text-center text-[var(--color-brand-gray)] border-t border-[var(--color-brand-dark)]">
-        <p>© {new Date().getFullYear()} - PCH.dev. Todos los derechos reservados.</p>
-      </footer>
+      <Footer />
     </div >
   );
 }
