@@ -263,6 +263,14 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
       })
 
       const mouse = Mouse.create(render.current.canvas)
+
+      // Permitir el scroll al no capturar la rueda del ratón
+      mouse.element.removeEventListener("mousewheel", (mouse as any).mousewheel)
+      mouse.element.removeEventListener("DOMMouseScroll", (mouse as any).mousewheel)
+
+      // Para navegadores modernos
+      mouse.element.removeEventListener("wheel", (mouse as any).mousewheel)
+
       mouseConstraint.current = MouseConstraint.create(engine.current, {
         mouse: mouse,
         constraint: {

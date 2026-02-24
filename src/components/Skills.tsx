@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Gravity, { MatterBody } from './Gravity';
+import type { GravityRef } from './Gravity';
+import { useInView } from 'framer-motion';
 
 const techIcons = [
     { name: 'JavaScript', src: '/tecnologias/JavaScript.webp' },
@@ -9,21 +11,30 @@ const techIcons = [
     { name: 'Dart', src: '/tecnologias/Dart.webp' },
     { name: 'Flutter', src: '/tecnologias/Flutter.webp' },
     { name: 'MySQL', src: '/tecnologias/mysql.webp' },
-    { name: 'GitHub', src: '/tecnologias/GIThub-mini-logo.webp' },
+    { name: 'GitHub', src: '/tecnologias/github2.webp' },
     { name: 'Antigravity', src: '/tecnologias/Antigravity.webp' },
-    { name: 'Claude', src: '/tecnologias/Claude.webp' }
+    { name: 'Claude', src: '/tecnologias/claude-color.webp' }
 ];
 
 const Skills: React.FC = () => {
     const [mounted, setMounted] = useState(false);
+    const containerRef = useRef<HTMLElement>(null);
+    const gravityRef = useRef<GravityRef>(null);
+    const isInView = useInView(containerRef, { amount: 0.5, once: true });
 
     useEffect(() => {
         // Retrasar el montaje para evitar comportamientos inestables de Matter.js en re-renders iniciales estrictos
         setMounted(true);
     }, []);
 
+    useEffect(() => {
+        if (mounted && isInView && gravityRef.current) {
+            gravityRef.current.start();
+        }
+    }, [mounted, isInView]);
+
     return (
-        <section id="habilidades" className="relative w-full h-[70vh] bg-transparent flex flex-col items-center justify-center border-b border-[var(--color-brand-dark)] overflow-hidden">
+        <section ref={containerRef} id="habilidades" className="relative w-full h-[70vh] bg-transparent flex flex-col items-center justify-center border-b border-[var(--color-brand-dark)] overflow-hidden">
 
             {/* Background radial soft gradient */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[var(--color-brand-black)]/50 pointer-events-none"></div>
@@ -39,6 +50,8 @@ const Skills: React.FC = () => {
 
             {mounted && (
                 <Gravity
+                    ref={gravityRef}
+                    autoStart={false}
                     gravity={{ x: 0, y: 1 }}
                     className="w-full h-full"
                 >
