@@ -49,31 +49,31 @@ const experienceData = [
 const skillsData = [
     {
         category: 'Lenguajes', items: [
-            { name: 'JavaScript', icon: '/tecnologias/JavaScript.webp' },
+            { name: 'JavaScript', icon: 'tecnologias/JavaScript.webp' },
             { name: 'Java', icon: null },
-            { name: 'HTML5', icon: '/tecnologias/HTML5-logo.webp' },
-            { name: 'CSS3', icon: '/tecnologias/CSS.webp' }
+            { name: 'HTML5', icon: 'tecnologias/HTML5-logo.webp' },
+            { name: 'CSS3', icon: 'tecnologias/CSS.webp' }
         ]
     },
     {
         category: 'Frameworks / Tecnologías', items: [
-            { name: 'Node.js', icon: '/tecnologias/Nodejs.webp' },
+            { name: 'Node.js', icon: 'tecnologias/Nodejs.webp' },
             { name: 'React Native', icon: null },
-            { name: 'Dart', icon: '/tecnologias/Dart.webp' },
-            { name: 'Flutter', icon: '/tecnologias/Flutter.webp' }
+            { name: 'Dart', icon: 'tecnologias/Dart.webp' },
+            { name: 'Flutter', icon: 'tecnologias/Flutter.webp' }
         ]
     },
     {
         category: 'Bases de datos', items: [
-            { name: 'MySQL', icon: '/tecnologias/mysql.webp' }
+            { name: 'MySQL', icon: 'tecnologias/mysql.webp' }
         ]
     },
     {
         category: 'Herramientas', items: [
-            { name: 'GitHub', icon: '/tecnologias/GIThub-mini-logo.webp' },
+            { name: 'GitHub', icon: 'tecnologias/GIThub-mini-logo.webp' },
             { name: 'Visual Studio Code', icon: null },
-            { name: 'Antigravity', icon: '/tecnologias/Antigravity.webp' },
-            { name: 'Claude', icon: '/tecnologias/Claude.webp' }
+            { name: 'Antigravity', icon: 'tecnologias/Antigravity.webp' },
+            { name: 'Claude', icon: 'tecnologias/Claude.webp' }
         ]
     },
     {
@@ -270,7 +270,7 @@ const Experience: React.FC = () => {
                                                 key={i}
                                                 className="skill-badge flex items-center gap-2 px-4 py-2 bg-[var(--color-brand-black)] border border-[var(--color-brand-coffee)]/30 text-[var(--color-brand-gray-lighter)] text-sm font-medium rounded-lg shadow-sm cursor-default hover:border-[var(--color-brand-coffee-light)] hover:text-white hover:-translate-y-1 transition-all duration-300"
                                             >
-                                                {skill.icon && <img src={skill.icon} alt={skill.name} className="w-5 h-5 object-contain" />}
+                                                {skill.icon && <img src={`${import.meta.env.BASE_URL}${skill.icon}`} alt={skill.name} className="w-5 h-5 object-contain" />}
                                                 {skill.name}
                                             </span>
                                         ))}
