@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import Skills from './components/Skills';
 import PixelTrail from './components/PixelTrail';
 import './App.css';
 
@@ -25,6 +26,7 @@ function App() {
         <About />
         <Projects />
         <Experience />
+        <Skills />
 
         <section id="contact" className="min-h-[60vh] flex items-center justify-center border-b border-[var(--color-brand-dark)]">
           <h2 className="text-3xl font-semibold text-[var(--color-brand-coffee-light)]">Contacto (Fase 6)</h2>
