@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
+import About from './components/About';
 import './App.css';
 
 function App() {
@@ -11,10 +12,7 @@ function App() {
         {/* Placeholder sections for scrolling anchors */}
 
         <Hero />
-
-        <section id="about" className="min-h-screen flex items-center justify-center border-b border-[var(--color-brand-dark)]">
-          <h2 className="text-3xl font-semibold">Sobre Mí (Fase 3)</h2>
-        </section>
+        <About />
 
         <section id="projects" className="min-h-screen flex items-center justify-center border-b border-[var(--color-brand-dark)] bg-opacity-50 bg-[var(--color-brand-dark)]">
           <h2 className="text-3xl font-semibold">Proyectos (Fase 4)</h2>
