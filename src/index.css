@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta base neutra, cálida y elegante (ajustada al fondo de la app) */
+  --color-brand-coffee: #3E2723;
+  --color-brand-coffee-light: #4E342E;
+  --color-brand-brown: #5D4037;
+  --color-brand-brown-light: #795548;
+  
+  --color-brand-black: #0A0A0A;
+  --color-brand-dark: #121212;
+  --color-brand-dark-glass: rgba(18, 18, 18, 0.7);
+  
+  --color-brand-gray: #757575;
+  --color-brand-gray-light: #9E9E9E;
+  --color-brand-gray-lighter: #EEEEEE;
+
+  /* Tipografías base */
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--color-brand-dark-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body {
+  background-color: var(--color-brand-black);
+  color: var(--color-brand-gray-lighter);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
