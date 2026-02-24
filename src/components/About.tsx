@@ -131,7 +131,7 @@ const About: React.FC = () => {
             {/* Background Canvas Secuencial */}
             <canvas
                 ref={canvasRef}
-                className="absolute top-0 left-0 w-full h-full object-cover opacity-[0.15] pointer-events-none mix-blend-screen"
+                className="absolute top-0 left-0 w-full h-full object-cover object-[80%_center] md:object-center opacity-[0.15] pointer-events-none mix-blend-screen"
             />
 
             {/* Luz ambiental */}
