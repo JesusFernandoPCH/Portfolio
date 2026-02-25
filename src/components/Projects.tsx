@@ -1,47 +1,55 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ProjectModal from './ProjectModal';
+import type { ProjectData } from './ProjectModal';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const projectsData = [
+const projectsData: ProjectData[] = [
     {
         id: 1,
-        title: 'E-Commerce Premium',
-        category: 'Fullstack Development',
-        image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        description: 'Plataforma de comercio electrónico de alto rendimiento con transacciones seguras y una UX deslumbrante.',
-        tech: ['React', 'Node.js', 'Stripe', 'Tailwind']
+        title: 'SonaPlay',
+        category: 'App movil reproductor de musica para Android',
+        image: 'imagenes/sonaplay2.webp',
+        description: 'Aplicación móvil Android, un reproductor de música con una interfaz fluida y una experiencia de usuario intuitiva, sin anuncios.',
+        fullDescription: 'SonaPlay es una aplicación nativa diseñada para ofrecer la mejor experiencia auditiva local en dispositivos Android. \n\n Cansado de los anuncion decidi crear un reproductor de música para Android que no contenga anuncios, fue un proyecto en el cual desarrolle mis habilidades en Flutter, Dart, Kotlin y Firebase con Crashlytics',
+        link: 'https://github.com/JesusFernandoPCH',
+        gallery: [
+            '/imagenes/sonaplay.webp',
+            '/imagenes/sonaplay2.webp'
+        ],
+        tech: [
+            { name: 'Flutter', icon: '/tecnologias/Flutter.webp' },
+            { name: 'Dart', icon: '/tecnologias/Dart.webp' },
+            { name: 'Kotlin', icon: '/tecnologias/Kotlin.webp' },
+            { name: 'Firebase', icon: '/tecnologias/firebase.webp' }
+        ]
     },
     {
         id: 2,
-        title: 'Fintech Dashboard',
-        category: 'UI/UX & Frontend',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        description: 'Panel de control financiero con visualización de datos en tiempo real y arquitectura escalable.',
-        tech: ['Next.js', 'TypeScript', 'D3.js']
-    },
-    {
-        id: 3,
-        title: 'AI Chat Interface',
-        category: 'Frontend Development',
-        image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        description: 'Interfaz fluida y futurista para un asistente de inteligencia artificial, priorizando la accesibilidad.',
-        tech: ['Vue', 'GSAP', 'Firebase']
-    },
-    {
-        id: 4,
-        title: 'Sistema de Reservas',
-        category: 'Backend & Architecture',
-        image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        description: 'Un motor de reservas para restaurantes operando bajo una estricta arquitectura orientada a microservicios.',
-        tech: ['Java', 'Spring Boot', 'PostgreSQL']
+        title: 'Recorrido virtual de una empresa',
+        category: 'Recorrido virtual 360°',
+        image: 'imagenes/fiesta.webp',
+        description: 'Recorrido virtual 360° de una empresa, permitiendo a los usuarios explorar las instalaciones de forma interactiva.',
+        fullDescription: 'Este proyecto consistió en levantar un entorno panorámico 360° interactivo para una empresa local. \n\nEl sistema permite la libre visualización inmersiva de los espacios corporativos directamente desde el navegador, empleando HTML5 y CSS3 puros renderizados encima de la librería Marzipano en JavaScript, lo que garantiza desempeño en tiempo real y compatibilidad alta entre plataformas.',
+        link: 'https://jesusfernandopch.github.io/CTuristico/',
+        gallery: [
+            '/imagenes/fiesta.webp'
+        ],
+        tech: [
+            { name: 'HTML5', icon: '/tecnologias/HTML5-logo.webp' },
+            { name: 'CSS3', icon: '/tecnologias/css2.webp' },
+            { name: 'JavaScript', icon: '/tecnologias/jav1.webp' },
+            { name: 'Marzipano', icon: '/tecnologias/marzipano.webp' }
+        ]
     }
 ];
 
 const Projects: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
     const cardsRef = useRef<HTMLDivElement[]>([]);
+    const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
 
     useEffect(() => {
         const el = sectionRef.current;
@@ -94,13 +102,13 @@ const Projects: React.FC = () => {
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <div className="projects-header mb-16 md:mb-24 text-center md:text-left">
                     <h2 className="text-sm md:text-base uppercase tracking-[0.3em] text-[var(--color-brand-coffee-light)] mb-4 font-semibold">
-                        Portafolio
+                        Portfolio
                     </h2>
                     <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight">
                         Proyectos Destacados.
                     </h3>
-                    <p className="mt-6 text-lg text-[var(--color-brand-gray-light)] max-w-2xl">
-                        Una selección de mi trabajo más reciente, combinando diseño de alta gama con ingeniería de software sofisticada.
+                    <p className="mt-6 text-lg text-[var(--color-brand-gray-light)] max-w-1xl">
+                        Una selección de mi trabajo, espero pronto poder compartir nuestro trabajo juntos.
                     </p>
                 </div>
 
@@ -135,29 +143,43 @@ const Projects: React.FC = () => {
 
                                 <div className="flex flex-wrap gap-2">
                                     {project.tech.map(tech => (
-                                        <span key={tech} className="px-3 py-1 text-xs font-medium text-[var(--color-brand-gray-lighter)] bg-white/5 rounded-full border border-white/10">
-                                            {tech}
-                                        </span>
+                                        <div key={tech.name} className="flex flex-row items-center gap-2 px-3 py-1.5 text-xs font-medium text-[var(--color-brand-gray-lighter)] bg-white/5 rounded-full border border-white/10 hover:border-[var(--color-brand-coffee-light)] transition-colors duration-300">
+                                            {tech.icon && (
+                                                <img src={`${import.meta.env.BASE_URL}${tech.icon}`} alt={tech.name} className="w-4 h-4 object-contain pointer-events-none" />
+                                            )}
+                                            <span>{tech.name}</span>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
 
                             {/* Enlace o Botón falso para la interacción */}
-                            <a href={`#project-${project.id}`} className="absolute inset-0 z-30" aria-label={`Ver detalles de ${project.title}`}></a>
+                            <button
+                                onClick={() => setSelectedProject(project)}
+                                className="absolute inset-0 z-30 w-full h-full text-left focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-coffee-light)] rounded-2xl cursor-pointer"
+                                aria-label={`Ver detalles de ${project.title}`}
+                            ></button>
                         </div>
                     ))}
                 </div>
 
                 <div className="mt-16 text-center">
                     <a
-                        href="#"
-                        onClick={(e) => { e.preventDefault(); alert('Botón para ver más proyectos en un futuro'); }}
+                        href="https://github.com/JesusFernandoPCH"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-block px-10 py-4 border border-[var(--color-brand-coffee)] text-[var(--color-brand-coffee-light)] hover:bg-[var(--color-brand-coffee)] hover:text-white font-medium tracking-widest uppercase text-sm transition-all duration-300"
                     >
                         Ver Archivo Completo
                     </a>
                 </div>
             </div>
+
+            <ProjectModal
+                project={selectedProject}
+                isOpen={selectedProject !== null}
+                onClose={() => setSelectedProject(null)}
+            />
         </section>
     );
 };

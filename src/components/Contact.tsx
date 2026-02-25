@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
                                 </div>
                             </div>
 
-                            <p className="text-[var(--color-brand-gray)] leading-relaxed mt-8">
+                            <p className="text-justify text-[var(--color-brand-gray)] leading-relaxed mt-8">
                                 Estoy disponible para nuevas oportunidades de desarrollo, especialmente enfocadas en soluciones de software de alto impacto y arquitectura de sistemas complejos. Si posees otras peticiones o preguntas, no dudes en utilizar este formulario para conectar conmigo.
                             </p>
                         </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -159,13 +160,13 @@ const About: React.FC = () => {
                         Conóceme
                     </h2>
                     <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-8">
-                        Pulsión por la Excelencia Tecnológica.
+                        De la curiosidad a la creación.
                     </h3>
-                    <p className="text-base sm:text-lg text-[var(--color-brand-gray-light)] mb-6 leading-relaxed">
-                        Soy un ingeniero <strong className="text-white font-semibold">apasionado por la arquitectura de software y el diseño meticuloso</strong>. Mi filosofía es que cada línea de código debe generar valor y cada aspecto del diseño debe ofrecer una experiencia intuitiva.
+                    <p className="text-justify sm:text-lg text-[var(--color-brand-gray-light)] mb-6 leading-relaxed">
+                        En un entorno que evoluciona rápidamente, <strong className="text-white font-semibold">mi mayor fortaleza es la adaptabilidad. </strong>Utilizo herramientas de IA para realizar investigaciones profundas, estructurar fases de desarrollo y acelerar la creación de código (Vibe Coding). Sin embargo, <strong className="text-white font-semibold">yo soy quien dirige la orquesta.</strong>
                     </p>
-                    <p className="text-base sm:text-lg text-[var(--color-brand-gray-light)] mb-10 leading-relaxed">
-                        Me concentro en la creación de interfaces optimizadas, animaciones fluidas que cuentan historias y arquitecturas sólidas que hacen magia por debajo del telón. Convertir las ideas complejas en experiencias web minimalistas y extraordinarias es mi objetivo de todos los días.
+                    <p className="text-justify sm:text-lg text-[var(--color-brand-gray-light)] mb-10 leading-relaxed">
+                        No programo a ciegas. <strong className="text-white font-semibold">Analizo, adapto y audito cada implementación para asegurar que cumple con los estándares más altos. </strong>Si un diseño no es perfecto o una animación no fluye como debería, iteraré hasta pulirlo por completo. La IA es mi herramienta, pero el criterio, la arquitectura y la resolución de problemas técnicos complejos corren por mi cuenta.
                     </p>
 
                     <div className="flex flex-wrap gap-4">
@@ -186,6 +187,17 @@ const About: React.FC = () => {
                         >
                             Descargar CV
                         </a>
+
+                        <a href="https://github.com/JesusFernandoPCH" target="_blank" rel="noopener noreferrer" className="text-[var(--color-brand-gray)] hover:text-white transition-colors p-2 bg-[var(--color-brand-dark)]/50 rounded-full hover:bg-[var(--color-brand-coffee)]">
+                            <Github size={20} />
+                        </a>
+                        <a href="https://www.linkedin.com/in/jes%C3%BAs-fernando-p%C3%A9rez-ch%C3%A1vez-3bab80361/" target="_blank" rel="noopener noreferrer" className="text-[var(--color-brand-gray)] hover:text-white transition-colors p-2 bg-[var(--color-brand-dark)]/50 rounded-full hover:bg-[var(--color-brand-coffee)]">
+                            <Linkedin size={20} />
+                        </a>
+                        <a href="mailto:yesper233@gmail.com" className="text-[var(--color-brand-gray)] hover:text-white transition-colors p-2 bg-[var(--color-brand-dark)]/50 rounded-full hover:bg-[var(--color-brand-coffee)]">
+                            <Mail size={20} />
+                        </a>
+
                     </div>
                 </div>
             </div>

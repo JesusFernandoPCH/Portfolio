@@ -88,16 +88,16 @@ const Hero: React.FC = () => {
             <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
                 <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 leading-none">
                     <div ref={title1Ref} className="overflow-hidden inline-flex flex-wrap justify-center text-[var(--color-brand-gray-lighter)]">
-                        {splitTextToChars("TRANSFORMANDO")}
+                        {splitTextToChars("MUCHO GUSTO")}
                     </div>
                     <br />
                     <div ref={title2Ref} className="overflow-hidden inline-flex flex-wrap justify-center text-[var(--color-brand-coffee-light)] mt-2">
-                        {splitTextToChars("IDEAS")}
+                        {splitTextToChars("SOY FERNANDO")}
                     </div>
                 </h1>
 
                 <p ref={descRef} className="mt-8 text-base sm:text-lg md:text-xl text-[var(--color-brand-gray-light)] max-w-2xl mx-auto leading-relaxed">
-                    Ingeniero de Software enfocado en crear experiencias interactivas, interfaces fluidas con diseño minimalista, y código optimizado que eleva cualquier proyecto web.
+                    Ingeniero en Sistemas Computacionales, construyo experiencias digitales desde cero. Orquesto tecnologías modernas e Inteligencia Artificial para transformar ideas complejas en interfaces intuitivas, escalables y con un diseño meticuloso.
                 </p>
 
                 <div className="mt-12">

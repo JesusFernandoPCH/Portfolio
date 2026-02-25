@@ -4,7 +4,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Extraído directamente desde el CV proporcionado por el usuario
 const educationData = [
     {
         period: 'Agosto 2021 – Actualmente',
@@ -22,7 +21,7 @@ const educationData = [
 
 const experienceData = [
     {
-        period: '22 de Agosto 2025 - 22 de Diciembre 2025',
+        period: '22 de Agosto 2025 - 22 de Febrero 2026',
         title: 'Auxiliar de Sistemas',
         company: 'Hotel Fiesta Americana Hacienda San Antonio El Puente',
         responsibilities: [
@@ -49,16 +48,15 @@ const experienceData = [
 const skillsData = [
     {
         category: 'Lenguajes', items: [
-            { name: 'JavaScript', icon: 'tecnologias/JavaScript.webp' },
-            { name: 'Java', icon: null },
             { name: 'HTML5', icon: 'tecnologias/HTML5-logo.webp' },
-            { name: 'CSS3', icon: 'tecnologias/CSS.webp' }
+            { name: 'JavaScript', icon: 'tecnologias/jav1.webp' },
+            { name: 'CSS3', icon: 'tecnologias/css2.webp' }
         ]
     },
     {
         category: 'Frameworks / Tecnologías', items: [
             { name: 'Node.js', icon: 'tecnologias/Nodejs.webp' },
-            { name: 'React Native', icon: null },
+            { name: 'React Native', icon: 'tecnologias/react.svg' },
             { name: 'Dart', icon: 'tecnologias/Dart.webp' },
             { name: 'Flutter', icon: 'tecnologias/Flutter.webp' }
         ]
@@ -70,22 +68,22 @@ const skillsData = [
     },
     {
         category: 'Herramientas', items: [
-            { name: 'GitHub', icon: 'tecnologias/GIThub-mini-logo.webp' },
-            { name: 'Visual Studio Code', icon: null },
+            { name: 'GitHub', icon: 'tecnologias/github2.webp' },
+            { name: 'Visual Studio Code', icon: 'tecnologias/Visual.webp' },
             { name: 'Antigravity', icon: 'tecnologias/Antigravity.webp' },
-            { name: 'Claude', icon: 'tecnologias/Claude.webp' }
+            { name: 'Claude', icon: 'tecnologias/claude-color.webp' }
         ]
     },
     {
         category: 'Sistemas Operativos', items: [
-            { name: 'Windows', icon: null },
-            { name: 'Linux Básico', icon: null }
+            { name: 'Windows', icon: 'tecnologias/Windows.webp' },
+            { name: 'Linux Básico', icon: 'tecnologias/linux.webp' }
         ]
     },
     {
         category: 'Idiomas', items: [
-            { name: 'Español (Nativo)', icon: null },
-            { name: 'Inglés (B1)', icon: null }
+            { name: 'Español (Nativo)', icon: 'tecnologias/mexico.webp' },
+            { name: 'Inglés (B1)', icon: 'tecnologias/usa.webp' }
         ]
     }
 ];

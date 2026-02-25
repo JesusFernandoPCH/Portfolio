@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
                         <a href="https://github.com/JesusFernandoPCH" target="_blank" rel="noopener noreferrer" className="text-[var(--color-brand-gray)] hover:text-white transition-colors p-2 bg-[var(--color-brand-dark)]/50 rounded-full hover:bg-[var(--color-brand-coffee)]">
                             <Github size={20} />
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-[var(--color-brand-gray)] hover:text-white transition-colors p-2 bg-[var(--color-brand-dark)]/50 rounded-full hover:bg-[var(--color-brand-coffee)]">
+                        <a href="https://www.linkedin.com/in/jes%C3%BAs-fernando-p%C3%A9rez-ch%C3%A1vez-3bab80361/" target="_blank" rel="noopener noreferrer" className="text-[var(--color-brand-gray)] hover:text-white transition-colors p-2 bg-[var(--color-brand-dark)]/50 rounded-full hover:bg-[var(--color-brand-coffee)]">
                             <Linkedin size={20} />
                         </a>
                         <a href="mailto:yesper233@gmail.com" className="text-[var(--color-brand-gray)] hover:text-white transition-colors p-2 bg-[var(--color-brand-dark)]/50 rounded-full hover:bg-[var(--color-brand-coffee)]">
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                         © {new Date().getFullYear()} Jesús Pérez (PCH.dev). Todos los derechos reservados.
                     </p>
                     <div className="flex space-x-6 text-sm text-[var(--color-brand-gray-light)]">
-                        <span className="hover:text-[var(--color-brand-coffee-light)] transition-colors cursor-pointer">Hecho con React, Vite y Tailwind en México</span>
+                        <span className="hover:text-[var(--color-brand-coffee-light)] transition-colors cursor-pointer">Hecho con React, Vite y Tailwind, (Gracias por todo midudev)</span>
                     </div>
                 </div>
             </div>

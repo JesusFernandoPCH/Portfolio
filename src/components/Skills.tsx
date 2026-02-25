@@ -44,7 +44,7 @@ const Skills: React.FC = () => {
                     Mis <span className="text-[var(--color-brand-coffee-light)]">Habilidades</span>
                 </h2>
                 <p className="text-[var(--color-brand-gray)] text-sm md:text-base max-w-lg mx-auto">
-                    Un ecosistema vivo. Puedes arrastrar, soltar y colisionar con mi stack tecnológico.
+                    Puedes arrastrar, soltar y colisionar con mi stack tecnológico.
                 </p>
             </div>
 
