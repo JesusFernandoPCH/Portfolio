@@ -66,7 +66,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
                     {/* Modal Content */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        animate={{ opacity: 1, scale: 0.8, y: 0 }} //size 0.8
                         exit={{ opacity: 0, scale: 0.95, y: 20 }}
                         transition={{ type: "spring", duration: 0.5, bounce: 0.3 }}
                         className="relative w-full max-w-6xl max-h-[90vh] bg-[var(--color-brand-black)] border border-[var(--color-brand-dark)] rounded-2xl shadow-2xl overflow-hidden flex flex-col z-10"

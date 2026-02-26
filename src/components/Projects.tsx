@@ -14,7 +14,7 @@ const projectsData: ProjectData[] = [
         image: 'imagenes/sonaplay2.webp',
         description: 'Aplicación móvil Android, un reproductor de música con una interfaz fluida y una experiencia de usuario intuitiva, sin anuncios.',
         fullDescription: 'SonaPlay es una aplicación nativa diseñada para ofrecer la mejor experiencia auditiva local en dispositivos Android. \n\n Cansado de los anuncion decidi crear un reproductor de música para Android que no contenga anuncios, fue un proyecto en el cual desarrolle mis habilidades en Flutter, Dart, Kotlin y Firebase con Crashlytics',
-        link: 'https://github.com/JesusFernandoPCH',
+        link: 'https://www.mediafire.com/file/b0u8i79c52h4i9f/SonaPlay.apk/file',
         gallery: [
             '/imagenes/sonaplay.webp',
             '/imagenes/sonaplay2.webp'
