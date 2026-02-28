@@ -178,7 +178,7 @@ const About: React.FC = () => {
                             Hablemos de tus Ideas
                         </a>
                         <a
-                            href="/Cv-JesusFernandoPerezChavez.pdf"
+                            href="public/Cv-JesusFernandoPerezChavez.pdf"
                             download="Cv-JesusFernandoPerezChavez.pdf"
                             className="px-8 py-3 border border-white/20 text-[var(--color-brand-gray-lighter)] hover:border-[var(--color-brand-coffee-light)] hover:text-[var(--color-brand-coffee-light)] font-medium tracking-wide transition-all duration-300 pointer-events-auto"
                         >
