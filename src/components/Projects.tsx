@@ -62,7 +62,7 @@ const projectsData: ProjectData[] = [
         image: 'imagenes/minimalist/Inicio.webp',
         description: 'Crea tu propio Résumé de forma interactiva para sistemas ATS.',
         fullDescription: 'Este proyecto consistió en crear un Résumé de forma interactiva para sistemas ATS. \n\nHoy en dia tener un cv capaz de pasar los filtros de los sistemas ATS es fundamental para conseguir empleo, por lo que decidí crear un Résumé de forma interactiva para sistemas ATS.',
-        link: 'https://jesusfernandopch.github.io/CTuristico/',
+        link: 'https://jesusfernandopch.github.io/minimalist-interactive-portfolio/',
         gallery: [
             '/imagenes/minimalist/demo.webp',
             '/imagenes/minimalist/Inicio.webp',
@@ -203,7 +203,7 @@ const Projects: React.FC = () => {
                         rel="noopener noreferrer"
                         className="inline-block px-10 py-4 border border-[var(--color-brand-coffee)] text-[var(--color-brand-coffee-light)] hover:bg-[var(--color-brand-coffee)] hover:text-white font-medium tracking-widest uppercase text-sm transition-all duration-300"
                     >
-                        Ver Archivo Completo
+                        Ver GitHub
                     </a>
                 </div>
             </div>
