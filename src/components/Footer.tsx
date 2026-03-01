@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                         <a href="https://www.linkedin.com/in/jes%C3%BAs-fernando-p%C3%A9rez-ch%C3%A1vez-3bab80361/" target="_blank" rel="noopener noreferrer" className="text-[var(--color-brand-gray)] hover:text-white transition-colors p-2 bg-[var(--color-brand-dark)]/50 rounded-full hover:bg-[var(--color-brand-coffee)]">
                             <Linkedin size={20} />
                         </a>
-                        <a href="mailto:yesper233@gmail.com" className="text-[var(--color-brand-gray)] hover:text-white transition-colors p-2 bg-[var(--color-brand-dark)]/50 rounded-full hover:bg-[var(--color-brand-coffee)]">
+                        <a href="mailto:jesusfernando.contacto@gmail.com" className="text-[var(--color-brand-gray)] hover:text-white transition-colors p-2 bg-[var(--color-brand-dark)]/50 rounded-full hover:bg-[var(--color-brand-coffee)]">
                             <Mail size={20} />
                         </a>
                     </div>
